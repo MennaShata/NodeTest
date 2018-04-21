@@ -16,11 +16,11 @@ apiRouter.route('/findByID').get((req,res,next)=>{
   })
 
 })
-apiRouter.route('/user/create').post((req,res,next)=>{
-let userObj = new User(req.body);
- userObj.save(function(err,user){
-   if(err) return next(err);
-   res.json({success:true, user: user})
+/ apiRouter.route('/user/create').post((req,res,next)=>{
+ let userObj = new User(req.body);
+userObj.save(function(err,user){
+  if(err) return next(err);
+  res.json({success:true, user: user})
  })
 })
 
